@@ -1,8 +1,10 @@
-# yama-no-tenki
+# ヤマノ天気検索
+
+山の天気をできるだけ早く検索できます。
 
 ## Usage
 
-- 
+- Open <https://yama-no-tenki.netlify.com/>
 
 ## Tests
 
