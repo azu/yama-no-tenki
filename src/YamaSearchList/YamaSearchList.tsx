@@ -28,23 +28,22 @@ export interface YamaItem {
     name: string;
     url: string;
     description: string;
-    latitude: string,
-    longitude: string,
-    height: string,
-    nameFurigana: string,
-    crestName: string,
-    crestNameFurigana: string,
-    otherName: string,
-    details: string,
-    address: string,
-    prefecturesstring: string[]
+    latitude: string;
+    longitude: string;
+    height: string;
+    nameFurigana: string;
+    crestName: string;
+    crestNameFurigana: string;
+    otherName: string;
+    details: string;
+    address: string;
+    prefecturesstring: string[];
 }
 
 export interface YamaItemProps {
     item: YamaItem;
-    filterWords: string[]
+    filterWords: string[];
 }
-
 
 export const YamaSearchListItemComponent = (props: YamaItemProps) => {
     const onKeyPress = (event: KeyboardEvent<any>) => {
@@ -53,25 +52,28 @@ export const YamaSearchListItemComponent = (props: YamaItemProps) => {
         }
     };
 
-    const creastName = props.item.crestName.length > 0 ? `> ${props.item.crestName}（${props.item.crestNameFurigana}）` : "";
-    const highlightNode = <Highlighter
-        highlightClassName="YourHighlightClass"
-        searchWords={props.filterWords}
-        autoEscape={true}
-        textToHighlight={`${props.item.name}（${props.item.nameFurigana}）${creastName}`}
-    />;
+    const creastName =
+        props.item.crestName.length > 0 ? `> ${props.item.crestName}（${props.item.crestNameFurigana}）` : "";
+    const highlightNode = (
+        <Highlighter
+            highlightClassName="YourHighlightClass"
+            searchWords={props.filterWords}
+            autoEscape={true}
+            textToHighlight={`${props.item.name}（${props.item.nameFurigana}）${creastName}`}
+        />
+    );
     return (
         <div className={"YamaSearchListItem"} data-is-focusable={true} onKeyDown={onKeyPress}>
             <div className="YamaSearchListItem-body">
                 <div className={"YamaSearchListItem-main"}>
                     <div className="YamaSearchListItem-title">
-                        {
-                            props.item.url
-                                ? <Link href={props.item.url} target={"_blank"} data-is-focusable={false}>
-                                    {highlightNode}
-                                </Link>
-                                : highlightNode
-                        }
+                        {props.item.url ? (
+                            <Link href={props.item.url} target={"_blank"} data-is-focusable={false}>
+                                {highlightNode}
+                            </Link>
+                        ) : (
+                            highlightNode
+                        )}
                     </div>
                 </div>
             </div>
@@ -86,7 +88,6 @@ export class YamaSearchList extends React.PureComponent<YamaSearchListProps, Yam
     };
     // @ts-ignore
     private textFieldRef = React.createRef<TextField>();
-
 
     componentDidUpdate(prevProps: YamaSearchListProps) {
         if (this.props.autoFocus !== prevProps.autoFocus) {
@@ -121,7 +122,7 @@ export class YamaSearchList extends React.PureComponent<YamaSearchListProps, Yam
                     label={"山名＜山頂名＞で絞り込めます" + resultCountText}
                     onChange={this.onFilterChanged}
                 />
-                <List className={"YamaSearchList-body"} items={items} onRenderCell={this.onRenderCell}/>
+                <List className={"YamaSearchList-body"} items={items} onRenderCell={this.onRenderCell} />
             </FocusZone>
         );
     }
@@ -141,8 +142,12 @@ export class YamaSearchList extends React.PureComponent<YamaSearchListProps, Yam
         }
         const filterWords = searchText.split(/\s/);
         const yamaItems = this.props.items.filter(item => {
-            return item.name.includes(searchText) || item.nameFurigana.includes(searchText) ||
-                item.crestName.includes(searchText) || item.crestNameFurigana.includes(searchText);
+            return (
+                item.name.includes(searchText) ||
+                item.nameFurigana.includes(searchText) ||
+                item.crestName.includes(searchText) ||
+                item.crestNameFurigana.includes(searchText)
+            );
         });
         this.setState({
             filterWords: filterWords,
@@ -151,6 +156,6 @@ export class YamaSearchList extends React.PureComponent<YamaSearchListProps, Yam
     };
 
     private onRenderCell = (item: any, index: number | undefined): JSX.Element => {
-        return <YamaSearchListItemComponent item={item} filterWords={this.state.filterWords}/>;
+        return <YamaSearchListItemComponent item={item} filterWords={this.state.filterWords} />;
     };
 }

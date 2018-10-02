@@ -8,17 +8,17 @@ const TenkuraList = require("./data/tenkura-list.json");
 type YamItem = {
     name: string;
     description: string;
-    latitude: string,
-    longitude: string,
-    height: string,
-    nameFurigana: string,
-    crestName: string,
-    crestNameFurigana: string,
-    otherName: string,
-    details: string,
-    address: string,
-    prefectures: string[]
-}
+    latitude: string;
+    longitude: string;
+    height: string;
+    nameFurigana: string;
+    crestName: string;
+    crestNameFurigana: string;
+    otherName: string;
+    details: string;
+    address: string;
+    prefectures: string[];
+};
 
 const normalizedEqual = (a: string, b: string) => {
     const normalizedA = a.replace(/ッ/g, "ヶ");
@@ -29,8 +29,12 @@ const normalizedEqual = (a: string, b: string) => {
 class App extends React.Component {
     public render() {
         const items = YamaList.map((item: YamItem) => {
-            const matchItem = TenkuraList.find((tenkuraItem: { name: string; url: string; }) => {
-                return normalizedEqual(tenkuraItem.name, item.name) || normalizedEqual(tenkuraItem.name, item.crestName) || normalizedEqual(tenkuraItem.name, item.address);
+            const matchItem = TenkuraList.find((tenkuraItem: { name: string; url: string }) => {
+                return (
+                    normalizedEqual(tenkuraItem.name, item.name) ||
+                    normalizedEqual(tenkuraItem.name, item.crestName) ||
+                    normalizedEqual(tenkuraItem.name, item.address)
+                );
             });
             if (!matchItem) {
                 return item;
@@ -55,9 +59,11 @@ class App extends React.Component {
             <div className="App">
                 <header>
                     <h1>ヤマノ天気検索</h1>
-                    <p><a href="https://tenkura.n-kishou.co.jp/tk/index.html">てんきとくらす [天気と生活情報]</a>の天気を検索できます</p>
+                    <p>
+                        <a href="https://tenkura.n-kishou.co.jp/tk/index.html">てんきとくらす [天気と生活情報]</a>の天気を検索できます
+                    </p>
                 </header>
-                <YamaSearchList items={items} autoFocus={true}/>
+                <YamaSearchList items={items} autoFocus={true} />
             </div>
         );
     }

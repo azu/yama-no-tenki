@@ -9,11 +9,11 @@
     "eject": "react-scripts-ts eject",
     "start": "react-scripts-ts start",
     "test": "react-scripts-ts test --env=jsdom",
-    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\""
+    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css}\""
   },
   "prettier": {
-    "printWidth": 120,
     "singleQuote": false,
+    "printWidth": 120,
     "tabWidth": 4
   },
   "dependencies": {
@@ -34,7 +34,7 @@
     "@types/node": "^10.11.3",
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.8",
-    "husky": "^1.0.1",
+    "husky": "^1.1.0",
     "jsdom": "^12.1.0",
     "lint-staged": "^7.3.0",
     "prettier": "^1.8.1",

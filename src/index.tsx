@@ -9,7 +9,7 @@ import { Fabric } from "office-ui-fabric-react";
 initializeIcons();
 ReactDOM.render(
     <Fabric>
-        <App/>
+        <App />
     </Fabric>,
     document.getElementById("root") as HTMLElement
 );
