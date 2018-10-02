@@ -1,0 +1,56 @@
+{
+  "name": "yama-no-tenki",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "react-scripts-ts build",
+    "eject": "react-scripts-ts eject",
+    "start": "react-scripts-ts start",
+    "test": "react-scripts-ts test --env=jsdom",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\""
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": false,
+    "tabWidth": 4
+  },
+  "dependencies": {
+    "@uifabric/icons": "^6.1.1",
+    "array.prototype.flat": "^1.2.1",
+    "debounce-promise": "^3.1.0",
+    "japanese-yama-list": "^1.0.1",
+    "office-ui-fabric-react": "^6.75.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-highlight-words": "^0.14.0",
+    "react-scripts-ts": "3.1.0",
+    "wanakana": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.2",
+    "@types/jsdom": "^11.12.0",
+    "@types/node": "^10.11.3",
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.8",
+    "husky": "^1.0.1",
+    "jsdom": "^12.1.0",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.8.1",
+    "typescript": "^3.1.1"
+  },
+  "resolutions": {
+    "@types/react": "16.4.14",
+    "@types/react-dom": "16.0.8"
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
