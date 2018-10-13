@@ -60,7 +60,8 @@ class App extends React.Component {
                 <header>
                     <h1>ヤマノテンキ検索</h1>
                     <p>
-                        <a href="https://tenkura.n-kishou.co.jp/tk/index.html">てんきとくらす [天気と生活情報]</a>の天気を検索できます
+                        <a href="https://tenkura.n-kishou.co.jp/tk/index.html">てんきとくらす [天気と生活情報]</a>の天気を検索できます。
+                        <a href="https://github.com/azu/yama-no-tenki" title="ソースコードはGitHubに">[GitHub]</a>
                     </p>
                 </header>
                 <YamaSearchList items={items} autoFocus={true} />
