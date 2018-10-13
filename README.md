@@ -4,11 +4,13 @@
 
 ## Usage
 
-- Open <https://yama-no-tenki.netlify.com/>
+次のURLからアクセスできます。
+
+- <https://yamanotenki.netlify.com/>
 
 ## Tests
 
-- [ ] Write How to Tests
+    yarn test
 
 ## Contributing
 
