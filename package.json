@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": " 山の天気をできるだけ早く検索できます",
-  "homepage": "https://yama-no-tenki.netlify.com",
+  "homepage": "https://yamanotenki.netlify.com",
   "scripts": {
     "build": "react-scripts-ts build",
     "eject": "react-scripts-ts eject",
