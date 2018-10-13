@@ -119,7 +119,7 @@ export class YamaSearchList extends React.PureComponent<YamaSearchListProps, Yam
                     iconProps={{
                         iconName: "Filter"
                     }}
-                    label={"山名＜山頂名＞で絞り込めます" + resultCountText}
+                    label={"山名＜山頂名＞で絞り込めます(アルファベット入力対応)" + resultCountText}
                     onChange={this.onFilterChanged}
                 />
                 <List className={"YamaSearchList-body"} items={items} onRenderCell={this.onRenderCell} />
