@@ -23,6 +23,7 @@
     "debounce-promise": "^3.1.0",
     "japanese-yama-list": "^1.0.4",
     "lodash.sortby": "^4.7.0",
+    "lodash.uniqby": "^4.7.0",
     "office-ui-fabric-react": "^6.75.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",

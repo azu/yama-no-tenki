@@ -3,6 +3,7 @@ import "./App.css";
 
 import { YamaSearchList, YamaItem } from "./YamaSearchList/YamaSearchList";
 const sortBy = require('lodash.sortby');
+const uniqBy = require('lodash.uniqby');
 
 const YamaList = require("japanese-yama-list");
 const TenkuraList = require("./data/tenkura-list.json");
@@ -78,7 +79,7 @@ TenkuraList.forEach((item: { name: string; nameFurigana: string; url: string, })
         prefectures: []
     });
 });
-const AppItems = sortBy(matchedItems, ['name', 'url']);
+const AppItems = uniqBy(sortBy(matchedItems, ['name', 'url']), "url");
 
 class App extends React.Component {
     public render() {
