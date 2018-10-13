@@ -59,7 +59,7 @@ export const YamaSearchListItemComponent = (props: YamaItemProps) => {
             highlightClassName="YourHighlightClass"
             searchWords={props.filterWords}
             autoEscape={true}
-            textToHighlight={`${props.item.name}（${props.item.nameFurigana}）${creastName}`}
+            textToHighlight={`${props.item.address} > ${props.item.name}（${props.item.nameFurigana}）${creastName}`}
         />
     );
     return (
