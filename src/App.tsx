@@ -58,7 +58,7 @@ class App extends React.Component {
         return (
             <div className="App">
                 <header>
-                    <h1>ヤマノ天気検索</h1>
+                    <h1>ヤマノテンキ検索</h1>
                     <p>
                         <a href="https://tenkura.n-kishou.co.jp/tk/index.html">てんきとくらす [天気と生活情報]</a>の天気を検索できます
                     </p>
