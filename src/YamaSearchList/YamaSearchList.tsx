@@ -28,16 +28,16 @@ export interface YamaItem {
     name: string;
     url: string;
     description: string;
-    latitude: string;
-    longitude: string;
-    height: string;
+    latitude?: string;
+    longitude?: string;
+    height?: string;
     nameFurigana: string;
     crestName: string;
     crestNameFurigana: string;
     otherName: string;
     details: string;
     address: string;
-    prefecturesstring: string[];
+    prefectures: string[];
 }
 
 export interface YamaItemProps {
@@ -52,14 +52,23 @@ export const YamaSearchListItemComponent = (props: YamaItemProps) => {
         }
     };
 
-    const creastName =
-        props.item.crestName.length > 0 ? `> ${props.item.crestName}（${props.item.crestNameFurigana}）` : "";
+    let fullName = "";
+    if (props.item.address.length > 0) {
+        fullName += `${props.item.address} > `;
+    }
+    fullName += props.item.name;
+    if (props.item.nameFurigana.length > 0) {
+        fullName += `（${props.item.nameFurigana} ）`
+    }
+    if (props.item.crestName.length > 0) {
+        fullName += `> ${props.item.crestName}`
+    }
     const highlightNode = (
         <Highlighter
             highlightClassName="YourHighlightClass"
             searchWords={props.filterWords}
             autoEscape={true}
-            textToHighlight={`${props.item.address} > ${props.item.name}（${props.item.nameFurigana}）${creastName}`}
+            textToHighlight={fullName}
         />
     );
     return (
@@ -72,8 +81,8 @@ export const YamaSearchListItemComponent = (props: YamaItemProps) => {
                                 {highlightNode}
                             </Link>
                         ) : (
-                            highlightNode
-                        )}
+                                highlightNode
+                            )}
                     </div>
                 </div>
             </div>

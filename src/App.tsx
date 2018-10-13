@@ -1,11 +1,12 @@
 import * as React from "react";
 import "./App.css";
 
-import { YamaSearchList } from "./YamaSearchList/YamaSearchList";
+import { YamaSearchList, YamaItem } from "./YamaSearchList/YamaSearchList";
+const sortBy = require('lodash.sortby');
 
 const YamaList = require("japanese-yama-list");
 const TenkuraList = require("./data/tenkura-list.json");
-type YamItem = {
+type RawYamItem = {
     name: string;
     description: string;
     latitude: string;
@@ -26,35 +27,61 @@ const normalizedEqual = (a: string, b: string) => {
     return normalizedA === normalizedB;
 };
 
+const usedTekunraMap = new Map<string, boolean>()
+const matchedItems: YamaItem[] = [];
+YamaList.forEach((item: RawYamItem) => {
+    const matchItem = TenkuraList.find((tenkuraItem: { name: string; nameFurigana: string; url: string }) => {
+        if (usedTekunraMap.has(tenkuraItem.url)) {
+            return false;
+        }
+        return (
+            normalizedEqual(tenkuraItem.name, item.name) ||
+            normalizedEqual(tenkuraItem.name, item.crestName) ||
+            normalizedEqual(tenkuraItem.name, item.address)
+        );
+    });
+    if (!matchItem) {
+        return;
+    }
+    usedTekunraMap.set(matchItem.url, true);
+    matchedItems.push({
+        name: item.name,
+        url: matchItem.url,
+        description: item.description,
+        latitude: item.latitude,
+        longitude: item.longitude,
+        height: item.height,
+        nameFurigana: item.nameFurigana,
+        crestName: item.crestName,
+        crestNameFurigana: item.crestNameFurigana,
+        otherName: item.otherName,
+        details: item.details,
+        address: item.address,
+        prefectures: item.prefectures
+    });
+});
+// no matched tenkura list
+TenkuraList.forEach((item: { name: string; nameFurigana: string; url: string, }) => {
+    if (usedTekunraMap.has(item.url)) {
+        return;
+    }
+    matchedItems.push({
+        name: item.name,
+        url: item.url,
+        description: "",
+        nameFurigana: item.nameFurigana,
+        crestName: "",
+        crestNameFurigana: "",
+        otherName: "",
+        details: "",
+        address: "",
+        prefectures: []
+    });
+});
+const AppItems = sortBy(matchedItems, ['name', 'url']);
+
 class App extends React.Component {
     public render() {
-        const items = YamaList.map((item: YamItem) => {
-            const matchItem = TenkuraList.find((tenkuraItem: { name: string; url: string }) => {
-                return (
-                    normalizedEqual(tenkuraItem.name, item.name) ||
-                    normalizedEqual(tenkuraItem.name, item.crestName) ||
-                    normalizedEqual(tenkuraItem.name, item.address)
-                );
-            });
-            if (!matchItem) {
-                return item;
-            }
-            return {
-                name: item.name,
-                url: matchItem.url,
-                description: item.description,
-                latitude: item.latitude,
-                longitude: item.longitude,
-                height: item.height,
-                nameFurigana: item.nameFurigana,
-                crestName: item.crestName,
-                crestNameFurigana: item.crestNameFurigana,
-                otherName: item.otherName,
-                details: item.details,
-                address: item.address,
-                prefectures: item.prefectures
-            };
-        });
         return (
             <div className="App">
                 <header>
@@ -64,7 +91,7 @@ class App extends React.Component {
                         <a href="https://github.com/azu/yama-no-tenki" title="ソースコードはGitHubに">[GitHub]</a>
                     </p>
                 </header>
-                <YamaSearchList items={items} autoFocus={true} />
+                <YamaSearchList items={AppItems} autoFocus={true} />
             </div>
         );
     }
