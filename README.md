@@ -8,6 +8,11 @@
 
 - <https://yamanotenki.netlify.com/>
 
+## Resources
+
+- [azu/japanese-yama-list: 日本の主な山岳標高一覧を返すライブラリ](https://github.com/azu/japanese-yama-list)
+- [高原・山の天気 - てんきとくらす \[天気と生活情報\]](https://tenkura.n-kishou.co.jp/tk/kanko/ka_type.html?type=15)
+
 ## Tests
 
     yarn test
