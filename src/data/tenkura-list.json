@@ -1295,6 +1295,11 @@
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=03150037&type=15&ba=th"
     },
     {
+        "name": "朝島山",
+        "nameFurigana": "あさしまやま",
+        "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=03150049&type=15&ba=th"
+    },
+    {
         "name": "東根山",
         "nameFurigana": "あずまねやま",
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=03150016&type=15&ba=th"
@@ -1508,11 +1513,6 @@
         "name": "物見山",
         "nameFurigana": "ものみやま",
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=03150018&type=15&ba=th"
-    },
-    {
-        "name": "薬師岳",
-        "nameFurigana": "やくしたけし",
-        "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=03150048&type=15&ba=th"
     },
     {
         "name": "焼石岳",
@@ -2260,6 +2260,16 @@
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=07150018&type=15&ba=th"
     },
     {
+        "name": "額取山",
+        "nameFurigana": "ひたいどりやま",
+        "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=07150079&type=15&ba=th"
+    },
+    {
+        "name": "額取山",
+        "nameFurigana": "ひたいどりやま",
+        "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=07150080&type=15&ba=th"
+    },
+    {
         "name": "日山（天王山）",
         "nameFurigana": "ひやま（てんのうざん）",
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=07150042&type=15&ba=th"
@@ -2505,6 +2515,11 @@
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=15150045&type=15&ba=hr"
     },
     {
+        "name": "清水峠",
+        "nameFurigana": "しみずとうげ",
+        "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=15150070&type=15&ba=hr"
+    },
+    {
         "name": "下権現堂山",
         "nameFurigana": "しもごんげんどうざん",
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=15150044&type=15&ba=hr"
@@ -2570,6 +2585,11 @@
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=15150057&type=15&ba=hr"
     },
     {
+        "name": "七ッ小屋山",
+        "nameFurigana": "ななつごややま",
+        "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=15150071&type=15&ba=hr"
+    },
+    {
         "name": "鳴倉山",
         "nameFurigana": "なくらやま",
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=15150020&type=15&ba=hr"
@@ -2588,6 +2608,11 @@
         "name": "ネコブ山",
         "nameFurigana": "ネコブさん",
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=15150051&type=15&ba=hr"
+    },
+    {
+        "name": "鋸山",
+        "nameFurigana": "のこぎりやま",
+        "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=15150072&type=15&ba=hr"
     },
     {
         "name": "袴腰山",
@@ -3575,6 +3600,11 @@
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=10150016&type=15&ba=kk"
     },
     {
+        "name": "金精峠",
+        "nameFurigana": "こんせいとうげ",
+        "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=10150064&type=15&ba=kk"
+    },
+    {
         "name": "至仏山",
         "nameFurigana": "しぶつさん",
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=10150008&type=15&ba=kk"
@@ -4518,6 +4548,11 @@
         "name": "大蔵高丸",
         "nameFurigana": "おおくらたかまる",
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=19150091&type=15&ba=kk"
+    },
+    {
+        "name": "大鹿山",
+        "nameFurigana": "おおじかやま",
+        "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=19150121&type=15&ba=kk"
     },
     {
         "name": "大栃山",
@@ -5708,6 +5743,11 @@
         "name": "白馬",
         "nameFurigana": "はくば",
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=20150001&type=15&ba=kk"
+    },
+    {
+        "name": "白馬大池山荘",
+        "nameFurigana": "はくばおおいけさんそう",
+        "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=20150173&type=15&ba=kk"
     },
     {
         "name": "白馬鑓ヶ岳",
@@ -8905,6 +8945,11 @@
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=43150005&type=15&ba=ks"
     },
     {
+        "name": "小金峰",
+        "nameFurigana": "こがねみね",
+        "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=43150029&type=15&ba=ks"
+    },
+    {
         "name": "白髪岳 ",
         "nameFurigana": "しらがたけ ",
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=43150007&type=15&ba=ks"
@@ -8923,6 +8968,11 @@
         "name": "俵山",
         "nameFurigana": "たわらやま",
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=43150008&type=15&ba=ks"
+    },
+    {
+        "name": "大金峰",
+        "nameFurigana": "おおがねみね",
+        "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=43150028&type=15&ba=ks"
     },
     {
         "name": "筒ヶ岳（小岱山）",
@@ -9295,6 +9345,11 @@
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=46150016&type=15&ba=ks"
     },
     {
+        "name": "石塚山",
+        "nameFurigana": "いしづかさん",
+        "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=46150041&type=15&ba=ks"
+    },
+    {
         "name": "磯間岳",
         "nameFurigana": "いそかんだけ",
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=46150006&type=15&ba=ks"
@@ -9343,6 +9398,11 @@
         "name": "国見岳",
         "nameFurigana": "くにみたけし",
         "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=46150034&type=15&ba=ks"
+    },
+    {
+        "name": "国割岳",
+        "nameFurigana": "くにわりだけ",
+        "url": "https://tenkura.n-kishou.co.jp/tk/kanko/kad.html?code=46150042&type=15&ba=ks"
     },
     {
         "name": "栗生岳",
